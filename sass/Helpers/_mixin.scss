@@ -1,0 +1,29 @@
+@mixin Wallpaper($top,$zi,$bottom) {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:$top;
+    z-index: $zi;
+    bottom: $bottom;
+}
+
+
+@mixin icon($top,$left) {
+    position: absolute;
+    color: $color-violet;
+    top: $top;
+    left: $left;
+}
+
+@mixin container {
+    max-width: 1500px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+}
+
+@mixin textStyle($fs,$fw,$color)  {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}

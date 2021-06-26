@@ -1,0 +1,95 @@
+.contact {
+    position: relative;
+    z-index: 3;
+    padding-top: 6.3rem;
+    margin-top: 10rem;
+    .container {
+      @include container;
+  
+      .contact__image {
+        width: 50%;
+        padding-left: 17rem;
+        img {
+          padding: 30px;
+        }
+      }
+  
+      .contact__form {
+        background-color: $color-white;
+        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        border-radius: 6px;
+        padding: 0 2.5rem;
+        margin-left: 7rem;
+        h1 {
+          @include textStyle($fs-7, $fw-2, $color-black-title);
+          padding: 6rem 0;
+          text-align: center;
+        }
+  
+        .form-text {
+          margin-bottom: $mg-5;
+          display: flex;
+  
+          .contactName,
+          .contactEmail {
+            max-width: 50%;
+            position: relative;
+            display: inline;
+  
+            i {
+              @include icon(none, 1.2rem);
+              line-height: 39px;
+            }
+            input {
+              padding: 1.1rem 0 1rem 2.6rem;
+              outline: none;
+              border-radius: 30px;
+              margin-right: 9px;
+              border-color: #eaeaea;
+            }
+          }
+        }
+  
+        .form-select {
+          position: relative;
+          i {
+            @include icon(-5px, 12px);
+            line-height: 3.9rem;
+          }
+  
+          select {
+            width: 100%;
+            padding: 0.7rem 2.3rem;
+            border-radius: 3rem;
+            cursor: pointer;
+            margin-bottom: $mg-5;
+          }
+        }
+  
+        .form-mess {
+          position: relative;
+          textarea {
+            line-height: 1.1;
+            width: 88%;
+            padding: 1.2rem 1rem 4.9rem 2.5rem;
+            border-radius: 14px;
+          }
+          i {
+            @include icon(1.4rem, 1.2rem);
+          }
+        }
+  
+        button {
+          padding: 1.8rem 6rem;
+          font-weight: 700;
+          text-align: left;
+          display: inherit;
+          margin: 42px 0;
+        }
+      }
+    }
+    .contact-wallpaper img {
+      @include Wallpaper(none, -1, 0);
+    }
+  }

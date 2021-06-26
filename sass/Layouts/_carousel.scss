@@ -1,0 +1,35 @@
+.carousel {
+    position: relative;
+    z-index: 3;
+    padding-top: 6.3rem;
+  
+    .container {
+      @include container;
+  
+      .carousel-title {
+        padding-right: 80px;
+        p {
+          @include textStyle($fs-5, $fw-2, $color-violet);
+          margin: 10px 0;
+        }
+        h1 {
+          @include textStyle($fs-8, $fw-3, $color-black-title);
+        }
+      }
+  
+      .carousel-image {
+        width: 67%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  
+    .carousel-wallpaper0 img {
+      @include Wallpaper(0, -2, none);
+    }
+  
+    .carousel-wallpaper img {
+      @include Wallpaper(none, -1, 0);
+    }
+  }

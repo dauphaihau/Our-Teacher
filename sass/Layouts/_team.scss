@@ -1,0 +1,63 @@
+.team {
+    background-color: #dcd1f3;
+    position: relative;
+    z-index: 3;
+    padding-top: 6.3rem;
+  
+    .container {
+      @include container;
+  
+      .team__member {
+        display: flex;
+        flex-wrap: wrap;
+  
+        .member {
+          width: 25%;
+          margin-bottom: 2.5rem;
+          padding: 2rem;
+  
+          .member__content {
+            border-radius: 6px;
+            transition: all 0.4s linear;
+  
+            &:hover {
+              transform: translateY(-0.5rem);
+              box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+              transition: 0.3s ease-in;
+            }
+  
+            .member__image {
+              img {
+                width: 100%;
+                border-top-right-radius: 6px;
+                border-top-left-radius: 6px;
+              }
+            }
+  
+            .member__info {
+              text-align: center;
+              background-color: $color-white;
+              border-bottom-left-radius: 6px;
+              border-bottom-right-radius: 6px;
+  
+              h4 {
+                padding-top: 3.5rem;
+                @include textStyle($fs-1, $fw-2, $color-violet);
+              }
+              h3 {
+                margin: 1.5rem 0;
+                @include textStyle($fs-6, $fw-3, $color-black-title);
+              }
+              p {
+                font-size: $fs-4;
+                padding: 0 2.5rem 4.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .team-wallpaper img {
+      @include Wallpaper(none, -1, 0);
+    }
+  }

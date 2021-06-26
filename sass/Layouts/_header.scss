@@ -1,0 +1,50 @@
+.header {
+  z-index: 11000;
+  position: fixed;
+  width: 100%;
+
+  .container {
+    @include container;
+    justify-content: space-between;
+    .header-logo {
+      width: 26%;
+    }
+    .nav {
+      display: flex;
+      flex-direction: row;
+      ul {
+        display: flex;
+        font-size: $fs-2;
+      }
+      li {
+        margin-right: 4.5rem;
+      }
+      a {
+        font-weight: $fw-2;
+        &:hover {
+          color: $color-violet;
+        }
+      }
+    }
+    .header-contact {
+      button {
+        margin-right: 10px;
+      }
+      span {
+        margin-left: 6px;
+      }
+      a {
+        margin-right: 1.5rem;
+        font-size: $fs-2;
+      }
+      .header-icon {
+        display: inline-block;
+        a:hover {
+          color: $color-violet;
+        }
+      }
+    }
+  }
+}
+
+
