@@ -86,7 +86,7 @@ a{
 }
 a:hover,
 a:hover img{
-    opacity: 0.80;
+    // opacity: 0.80;
     filter: alpha(opacity=80);
 	-ms-filter: "alpha(opacity=80)";
 }
@@ -94,6 +94,3 @@ img{
 	max-width: 100%;
 }
 
-main {
-	position: relative;
-  }

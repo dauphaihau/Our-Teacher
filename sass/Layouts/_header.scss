@@ -1,17 +1,25 @@
 .header {
   z-index: 11000;
-  position: fixed;
+  position: absolute;
   width: 100%;
 
   .container {
-    @include container;
+    align-items: center;
+    display: flex;
     justify-content: space-between;
+
     .header-logo {
       width: 26%;
+
+      img {
+        width: 80px;
+      }
     }
+
     .nav {
       display: flex;
       flex-direction: row;
+      padding-left: 5rem;
       ul {
         display: flex;
         font-size: $fs-2;
@@ -21,30 +29,34 @@
       }
       a {
         font-weight: $fw-2;
+
         &:hover {
           color: $color-violet;
         }
       }
     }
+
     .header-contact {
-      button {
-        margin-right: 10px;
-      }
       span {
         margin-left: 6px;
       }
-      a {
+
+      .btn-violet {
         margin-right: 1.5rem;
-        font-size: $fs-2;
       }
+
       .header-icon {
         display: inline-block;
-        a:hover {
-          color: $color-violet;
+
+        a {
+          margin-right: 1.5rem;
+          font-size: $fs-2;
+
+          &:hover {
+            color: $color-violet;
+          }
         }
       }
     }
   }
 }
-
-

@@ -1,11 +1,8 @@
 .contact {
-    position: relative;
-    z-index: 3;
-    padding-top: 6.3rem;
+    @extend .carousel;
     margin-top: 10rem;
-    .container {
-      @include container;
-  
+    .container {  
+      
       .contact__image {
         width: 50%;
         padding-left: 17rem;
@@ -22,7 +19,7 @@
         padding: 0 2.5rem;
         margin-left: 7rem;
         h1 {
-          @include textStyle($fs-7, $fw-2, $color-black-title);
+          @include textStyle($fs-7, $fw-3, $color-black-title);
           padding: 6rem 0;
           text-align: center;
         }
@@ -38,7 +35,7 @@
             display: inline;
   
             i {
-              @include icon(none, 1.2rem);
+              @include icon(none, 1.2rem);  
               line-height: 39px;
             }
             input {
@@ -82,10 +79,10 @@
   
         button {
           padding: 1.8rem 6rem;
-          font-weight: 700;
+          font-weight: $fw-3;
           text-align: left;
           display: inherit;
-          margin: 42px 0;
+          margin: 4.2rem 0;
         }
       }
     }
