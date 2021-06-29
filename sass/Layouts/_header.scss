@@ -60,3 +60,19 @@
     }
   }
 }
+
+@include breakpoint(1024) {
+  .header .container .header-logo {
+    width: 8%;
+  }
+}
+
+@include breakpoint(767) {
+  .header .container {
+    padding: 0 3rem;
+
+    .header-contact {
+      display: none;
+    }
+  }
+}

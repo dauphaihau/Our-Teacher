@@ -17,8 +17,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   outline: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 article, aside, details, figcaption, figure,
@@ -77,7 +76,6 @@ img {
 
 a,
 a img {
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -112,10 +110,8 @@ main {
   border: 2px solid #fff;
   border-radius: 3.9rem;
   line-height: 1;
-  -webkit-box-shadow: 0 0 0 3em #b61984 inset;
-          box-shadow: 0 0 0 3em #b61984 inset;
+  box-shadow: 0 0 0 3em #b61984 inset;
   color: white;
-  -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   font-weight: 500;
   cursor: pointer;
@@ -124,11 +120,9 @@ main {
 .btn-violet:hover {
   color: #b61984;
   background-color: transparent;
-  -webkit-transition: all 0.4 linear;
   transition: all 0.4 linear;
   border: 2px solid #b61984;
-  -webkit-box-shadow: 0 0 0 1px #b61984 inset;
-          box-shadow: 0 0 0 1px #b61984 inset;
+  box-shadow: 0 0 0 1px #b61984 inset;
 }
 
 .header {
@@ -138,15 +132,9 @@ main {
 }
 
 .header .container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .header .container .header-logo {
@@ -158,19 +146,12 @@ main {
 }
 
 .header .container .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   padding-left: 5rem;
 }
 
 .header .container .nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 1.3rem;
 }
@@ -208,6 +189,21 @@ main {
   color: #b61984;
 }
 
+@media only screen and (max-width: 1024px) {
+  .header .container .header-logo {
+    width: 8%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header .container {
+    padding: 0 3rem;
+  }
+  .header .container .header-contact {
+    display: none;
+  }
+}
+
 .carousel, .team, .contact {
   position: relative;
   z-index: 3;
@@ -215,12 +211,32 @@ main {
 }
 
 .carousel .container, .team .container, .contact .container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel .container, .team .container, .contact .container {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .carousel .container, .team .container, .contact .container {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel .container .carousel-title, .team .container .carousel-title, .contact .container .carousel-title {
+    font-size: 3.75rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .carousel .container .carousel-title, .team .container .carousel-title, .contact .container .carousel-title {
+    padding-right: 0;
+  }
 }
 
 .carousel .container .carousel-title p, .team .container .carousel-title p, .contact .container .carousel-title p {
@@ -236,8 +252,20 @@ main {
   color: #191919;
 }
 
+@media only screen and (max-width: 575px) {
+  .carousel .container .carousel-title h1, .team .container .carousel-title h1, .contact .container .carousel-title h1 {
+    font-size: 3.75rem;
+  }
+}
+
 .carousel .container .carousel-image, .team .container .carousel-image, .contact .container .carousel-image {
   width: 85%;
+}
+
+@media only screen and (max-width: 575px) {
+  .carousel .container .carousel-image, .team .container .carousel-image, .contact .container .carousel-image {
+    width: 100%;
+  }
 }
 
 .carousel .container .carousel-image img, .team .container .carousel-image img, .contact .container .carousel-image img {
@@ -262,16 +290,19 @@ main {
   bottom: 0;
 }
 
+@media only screen and (max-width: 767px) {
+  .carousel, .team, .contact {
+    padding-top: 10.3rem;
+  }
+}
+
 .team {
   background-color: #dcd1f3;
 }
 
 .team .container .team__member {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .team .container .team__member .member {
@@ -282,16 +313,12 @@ main {
 
 .team .container .team__member .member .member__content {
   border-radius: 6px;
-  -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
 }
 
 .team .container .team__member .member .member__content:hover {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
-  -webkit-box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s ease-in;
+  transform: translateY(-0.5rem);
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
   transition: 0.3s ease-in;
 }
 
@@ -336,6 +363,32 @@ main {
   bottom: 0;
 }
 
+@media only screen and (max-width: 1024px) {
+  .team .container .team__member .member .member__content p {
+    font-size: 1.5rem;
+    padding: 0 1.5rem 4.9rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .team .container .team__member .member {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .team .container .team__member .member .member__content p {
+    font-size: 1.5rem;
+    padding: 0 1.5rem 4.9rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .team .container .team__member .member {
+    width: 100%;
+  }
+}
+
 .contact {
   margin-top: 10rem;
 }
@@ -345,18 +398,31 @@ main {
   padding-left: 17rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .contact .container .contact__image {
+    width: 100%;
+    padding-left: initial;
+  }
+}
+
 .contact .container .contact__image img {
   padding: 30px;
 }
 
 .contact .container .contact__form {
   background-color: #fff;
-  -webkit-box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
   text-align: left;
   border-radius: 6px;
   padding: 0 2.5rem;
   margin-left: 7rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .contact .container .contact__form {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .contact .container .contact__form h1 {
@@ -369,9 +435,25 @@ main {
 
 .contact .container .contact__form .form-text {
   margin-bottom: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-width: 767px) {
+  .contact .container .contact__form .form-text {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact .container .contact__form .form-text {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contact .container .contact__form .form-text {
+    flex-wrap: wrap;
+  }
 }
 
 .contact .container .contact__form .form-text .contactName,
@@ -379,6 +461,30 @@ main {
   max-width: 50%;
   position: relative;
   display: inline;
+}
+
+@media only screen and (max-width: 767px) {
+  .contact .container .contact__form .form-text .contactName,
+  .contact .container .contact__form .form-text .contactEmail {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact .container .contact__form .form-text .contactName,
+  .contact .container .contact__form .form-text .contactEmail {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contact .container .contact__form .form-text .contactName,
+  .contact .container .contact__form .form-text .contactEmail {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .contact .container .contact__form .form-text .contactName i,
@@ -397,6 +503,34 @@ main {
   border-radius: 30px;
   margin-right: 9px;
   border-color: #eaeaea;
+}
+
+@media only screen and (max-width: 991px) {
+  .contact .container .contact__form .form-text .contactName input,
+  .contact .container .contact__form .form-text .contactEmail input {
+    padding: 1.1rem 25rem 1rem 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact .container .contact__form .form-text .contactName input,
+  .contact .container .contact__form .form-text .contactEmail input {
+    padding: 1.1rem 46rem 1rem 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact .container .contact__form .form-text .contactName input,
+  .contact .container .contact__form .form-text .contactEmail input {
+    padding: 1.1rem 32rem 1rem 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contact .container .contact__form .form-text .contactName input,
+  .contact .container .contact__form .form-text .contactEmail input {
+    padding: 1.1rem 9rem 1rem 2.6rem;
+  }
 }
 
 .contact .container .contact__form .form-select {
@@ -419,6 +553,24 @@ main {
   margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 991px) {
+  .contact .container .contact__form .form-select select {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact .container .contact__form .form-select select {
+    width: 101%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contact .container .contact__form .form-select select {
+    width: 101%;
+  }
+}
+
 .contact .container .contact__form .form-mess {
   position: relative;
 }
@@ -428,6 +580,18 @@ main {
   width: 88%;
   padding: 1.2rem 1rem 4.9rem 2.5rem;
   border-radius: 14px;
+}
+
+@media only screen and (max-width: 991px) {
+  .contact .container .contact__form .form-mess textarea {
+    width: 93.5%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contact .container .contact__form .form-mess textarea {
+    width: 86.5%;
+  }
 }
 
 .contact .container .contact__form .form-mess i {
@@ -445,6 +609,24 @@ main {
   margin: 4.2rem 0;
 }
 
+@media only screen and (max-width: 767px) {
+  .contact .container .contact__form button {
+    padding: 1.8rem 30.5rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact .container .contact__form button {
+    padding: 1.8rem 21rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contact .container .contact__form button {
+    padding: 1.8rem 10.5rem;
+  }
+}
+
 .contact .contact-wallpaper img {
   width: 100%;
   position: absolute;
@@ -452,6 +634,13 @@ main {
   top: none;
   z-index: -1;
   bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .contact .container .contact__form .form-text .contactName input,
+  .contact .container .contact__form .form-text .contactEmail input {
+    padding: 1.1rem 49rem 1rem 2.6rem;
+  }
 }
 
 .footer {
@@ -464,8 +653,6 @@ main {
 }
 
 .footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -525,24 +712,6 @@ main {
   margin-bottom: 12px;
 }
 
-.footer .container .footer__item .footer__content .footer-input .footer-input__email input::-webkit-input-placeholder {
-  font-size: 0.9em;
-  opacity: 1;
-  color: #fff;
-}
-
-.footer .container .footer__item .footer__content .footer-input .footer-input__email input:-ms-input-placeholder {
-  font-size: 0.9em;
-  opacity: 1;
-  color: #fff;
-}
-
-.footer .container .footer__item .footer__content .footer-input .footer-input__email input::-ms-input-placeholder {
-  font-size: 0.9em;
-  opacity: 1;
-  color: #fff;
-}
-
 .footer .container .footer__item .footer__content .footer-input .footer-input__email input::placeholder {
   font-size: 0.9em;
   opacity: 1;
@@ -555,35 +724,18 @@ main {
   background-color: #fff;
   color: black;
   font-size: 1.3rem;
-  -webkit-box-shadow: 0 0 0 3em #fff inset;
-          box-shadow: 0 0 0 3em #fff inset;
+  box-shadow: 0 0 0 3em #fff inset;
 }
 
 .footer .container .footer__item .footer__content .footer-input .footer-input__subscribe input:hover {
   color: #fff;
   background-color: transparent;
-  -webkit-transition: all 0.4 linear;
   transition: all 0.4 linear;
   border: 2px solid #fff;
-  -webkit-box-shadow: 0 0 0 1px #fff inset;
-          box-shadow: 0 0 0 1px #fff inset;
+  box-shadow: 0 0 0 1px #fff inset;
 }
 
 @media only screen and (max-width: 1024px) {
-  .carousel .container, .team .container, .contact .container {
-    padding: 0 3.5rem;
-  }
-  .carousel .carousel-title, .team .carousel-title, .contact .carousel-title {
-    font-size: 3.75rem;
-  }
-  .team .container .team__member .member .member__content p {
-    font-size: 1.5rem;
-    padding: 0 1.5rem 4.9rem;
-  }
-  .contact .container .contact__image {
-    width: 100%;
-    padding-left: initial;
-  }
   .footer {
     padding: 19rem 2rem;
   }
@@ -596,35 +748,11 @@ main {
 }
 
 @media only screen and (max-width: 991px) {
-  .carousel .container, .team .container, .contact .container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .carousel .container .contact__form, .team .container .contact__form, .contact .container .contact__form {
-    width: 100%;
-    margin-left: 0;
-  }
-  .carousel .container .contact__form .form-text .contactName input, .team .container .contact__form .form-text .contactName input, .contact .container .contact__form .form-text .contactName input,
-  .carousel .container .contact__form .form-text .contactEmail input,
-  .team .container .contact__form .form-text .contactEmail input,
-  .contact .container .contact__form .form-text .contactEmail input {
-    padding: 1.1rem 25rem 1rem 2.6rem;
-  }
-  .carousel .container .contact__form .form-select select, .team .container .contact__form .form-select select, .contact .container .contact__form .form-select select {
-    width: 98%;
-  }
-  .carousel .container .contact__form .form-mess textarea, .team .container .contact__form .form-mess textarea, .contact .container .contact__form .form-mess textarea {
-    width: 93.5%;
-  }
-  .team .container .team__member .member {
-    width: 50%;
-  }
   .footer {
     padding: 19rem 3rem;
   }
   .footer .container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .footer .container .footer__item {
     width: 50%;
@@ -638,60 +766,12 @@ main {
 }
 
 @media only screen and (max-width: 767px) {
-  .contact .container .contact__form .form-text {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .contact .container .contact__form .form-text .contactName,
-  .contact .container .contact__form .form-text .contactEmail {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .contact .container .contact__form .form-text .contactName input,
-  .contact .container .contact__form .form-text .contactEmail input {
-    padding: 1.1rem 46rem 1rem 2.6rem;
-  }
-  .contact .container .contact__form button {
-    padding: 1.8rem 30.5rem;
-  }
   .footer .container .footer__item .footer__content .footer-button button {
     width: 104%;
   }
 }
 
 @media only screen and (max-width: 575px) {
-  .carousel .container .carousel-title, .team .container .carousel-title, .contact .container .carousel-title {
-    padding-right: 0;
-  }
-  .carousel .container .carousel-title h1, .team .container .carousel-title h1, .contact .container .carousel-title h1 {
-    font-size: 3.75rem;
-  }
-  .carousel .container .carousel-image, .team .container .carousel-image, .contact .container .carousel-image {
-    width: 100%;
-  }
-  .team .container .team__member .member .member__content p {
-    font-size: 1.5rem;
-    padding: 0 1.5rem 4.9rem;
-  }
-  .contact .container .contact__form .form-text {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .contact .container .contact__form .form-text .contactName,
-  .contact .container .contact__form .form-text .contactEmail {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .contact .container .contact__form .form-text .contactName input,
-  .contact .container .contact__form .form-text .contactEmail input {
-    padding: 1.1rem 29rem 1rem 2.6rem;
-  }
-  .contact .container .contact__form .form-select select {
-    width: 101%;
-  }
-  .contact .container .contact__form button {
-    padding: 1.8rem 21rem;
-  }
   .footer .container .footer__item {
     width: 50%;
     margin-bottom: 7rem;
@@ -703,30 +783,8 @@ main {
 }
 
 @media only screen and (max-width: 375px) {
-  .team .container .team__member .member {
+  .footer .container .footer__item {
     width: 100%;
-  }
-  .contact .container .contact__form .form-text {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .contact .container .contact__form .form-text .contactName,
-  .contact .container .contact__form .form-text .contactEmail {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .contact .container .contact__form .form-text .contactName input,
-  .contact .container .contact__form .form-text .contactEmail input {
-    padding: 1.1rem 9rem 1rem 2.6rem;
-  }
-  .contact .container .contact__form .form-select select {
-    width: 101%;
-  }
-  .contact .container .contact__form .form-mess textarea {
-    width: 86.5%;
-  }
-  .contact .container .contact__form button {
-    padding: 1.8rem 10.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

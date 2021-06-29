@@ -6,18 +6,40 @@
   .container {
     align-items: center;
     display: flex;
+    @include breakpoint(1024) {
+      padding: 0 2rem;
+    }
+
+    @include breakpoint(991) {
+      flex-wrap: wrap;
+    }
+
+
     
     .carousel-title {
+      @include breakpoint(1024) {
+        font-size: $fs-7;
+      }
+
+      @include breakpoint(575) {
+        padding-right: 0;
+      }
       p {
         @include textStyle($fs-5, $fw-2, $color-violet);
         margin: 10px 0;
       }
       h1 {
         @include textStyle($fs-8, $fw-3, $color-black-title);
+        @include breakpoint(575) {
+          font-size: $fs-7;
+        }
       }
     }
 
     .carousel-image {
+      @include breakpoint(575){
+        width: 100%;
+      }
       width: 85%;
       img {
         width: 100%;
@@ -31,5 +53,11 @@
 
   .carousel-wallpaper img {
     @include Wallpaper(none, -1, 0);
+  }
+}
+
+@include breakpoint(767) {
+  .carousel {
+    padding-top: 10.3rem;
   }
 }

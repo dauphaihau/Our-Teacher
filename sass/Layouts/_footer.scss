@@ -89,3 +89,69 @@
     }
   }
 }
+
+
+@include breakpoint(1024) {
+  .footer {
+    padding: 19rem 2rem;
+
+    .container .footer__item .footer__content {
+      padding: 0 7px;
+
+      .footer-button button {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@include breakpoint(991) {
+  .footer {
+    padding: 19rem 3rem;
+
+    .container {
+      flex-wrap: wrap;
+
+      .footer__item {
+        width: 50%;
+
+        .footer__content .footer-button {
+          input {
+            width: 88%;
+          }
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(767) {
+  .footer .container .footer__item .footer__content .footer-button button {
+    width: 104%;
+  }
+}
+
+@include breakpoint(575) {
+  .footer .container {
+    .footer__item {
+      width: 50%;
+      margin-bottom: 7rem;
+      padding-right: 1rem;
+
+      .footer__content .footer-button {
+        input {
+          width: 84%;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(375) {
+  .footer .container .footer__item {
+    width: 100%;
+  }
+}

@@ -55,3 +55,28 @@
     @include Wallpaper(none, -1, 0);
   }
 
+@include breakpoint(1024) {
+  .team .container .team__member .member .member__content p {
+    font-size: 1.5rem;
+    padding: 0 1.5rem 4.9rem;
+  }
+}
+
+@include breakpoint(991) {
+  .team .container .team__member .member {
+    width: 50%;
+  }
+}
+
+@include breakpoint(575) {
+  .team .container .team__member .member .member__content p {
+    font-size: 1.5rem;
+    padding: 0 1.5rem 4.9rem;
+  }
+}
+
+@include breakpoint(375) {
+  .team .container .team__member .member {
+    width: 100%;
+  }
+}

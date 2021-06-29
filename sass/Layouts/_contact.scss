@@ -1,92 +1,183 @@
 .contact {
-    @extend .carousel;
-    margin-top: 10rem;
-    .container {  
-      
-      .contact__image {
-        width: 50%;
-        padding-left: 17rem;
-        img {
-          padding: 30px;
-        }
+  @extend .carousel;
+  margin-top: 10rem;
+  .container {
+    .contact__image {
+      @include breakpoint(1024) {
+        width: 100%;
+        padding-left: initial;
       }
-  
-      .contact__form {
-        background-color: $color-white;
-        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
-        text-align: left;
-        border-radius: 6px;
-        padding: 0 2.5rem;
-        margin-left: 7rem;
-        h1 {
-          @include textStyle($fs-7, $fw-3, $color-black-title);
-          padding: 6rem 0;
-          text-align: center;
-        }
-  
-        .form-text {
-          margin-bottom: $mg-5;
-          display: flex;
-  
-          .contactName,
-          .contactEmail {
-            max-width: 50%;
-            position: relative;
-            display: inline;
-  
-            i {
-              @include icon(none, 1.2rem);  
-              line-height: 39px;
-            }
-            input {
-              padding: 1.1rem 0 1rem 2.6rem;
-              outline: none;
-              border-radius: 30px;
-              margin-right: 9px;
-              border-color: #eaeaea;
-            }
-          }
-        }
-  
-        .form-select {
-          position: relative;
-          i {
-            @include icon(-5px, 12px);
-            line-height: 3.9rem;
-          }
-  
-          select {
-            width: 100%;
-            padding: 0.7rem 2.3rem;
-            border-radius: 3rem;
-            cursor: pointer;
-            margin-bottom: $mg-5;
-          }
-        }
-  
-        .form-mess {
-          position: relative;
-          textarea {
-            line-height: 1.1;
-            width: 88%;
-            padding: 1.2rem 1rem 4.9rem 2.5rem;
-            border-radius: 14px;
-          }
-          i {
-            @include icon(1.4rem, 1.2rem);
-          }
-        }
-  
-        button {
-          padding: 1.8rem 6rem;
-          font-weight: $fw-3;
-          text-align: left;
-          display: inherit;
-          margin: 4.2rem 0;
-        }
+
+      width: 50%;
+      padding-left: 17rem;
+      img {
+        padding: 30px;
       }
     }
-    .contact-wallpaper img {
-      @include Wallpaper(none, -1, 0);
+
+    .contact__form {
+      @include breakpoint(991) {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      background-color: $color-white;
+      box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      border-radius: 6px;
+      padding: 0 2.5rem;
+      margin-left: 7rem;
+
+      h1 {
+        @include textStyle($fs-7, $fw-3, $color-black-title);
+        padding: 6rem 0;
+        text-align: center;
+      }
+
+      .form-text {
+        margin-bottom: $mg-5;
+        display: flex;
+
+        @include breakpoint(767) {
+          flex-wrap: wrap;
+        }
+
+        @include breakpoint(575) {
+          flex-wrap: wrap;
+        }
+
+        @include breakpoint(375) {
+          flex-wrap: wrap;
+        }
+
+        .contactName,
+        .contactEmail {
+          @include breakpoint(767) {
+            max-width: 100%;
+            margin-bottom: 1rem;
+          }
+
+          @include breakpoint(575) {
+            max-width: 100%;
+            margin-bottom: 1rem;
+          }
+
+          @include breakpoint(375) {
+            max-width: 100%;
+            margin-bottom: 1rem;
+          }
+
+          max-width: 50%;
+          position: relative;
+          display: inline;
+
+          i {
+            @include icon(none, 1.2rem);
+            line-height: 39px;
+          }
+          input {
+            padding: 1.1rem 0 1rem 2.6rem;
+            outline: none;
+            border-radius: 30px;
+            margin-right: 9px;
+            border-color: #eaeaea;
+
+            @include breakpoint(991) {
+              padding: 1.1rem 25rem 1rem 2.6rem;
+            }
+
+            @include breakpoint(767) {
+              padding: 1.1rem 46rem 1rem 2.6rem;
+            }
+
+            @include breakpoint(575) {
+              padding: 1.1rem 32rem 1rem 2.6rem;
+            }
+
+            @include breakpoint(375) {
+              padding: 1.1rem 9rem 1rem 2.6rem;
+            }
+          }
+        }
+      }
+
+      .form-select {
+        position: relative;
+        i {
+          @include icon(-5px, 12px);
+          line-height: 3.9rem;
+        }
+
+        select {
+          width: 100%;
+          padding: 0.7rem 2.3rem;
+          border-radius: 3rem;
+          cursor: pointer;
+          margin-bottom: $mg-5;
+
+          @include breakpoint(991) {
+            width: 98%;
+          }
+
+          @include breakpoint(575) {
+            width: 101%;
+          }
+
+          @include breakpoint(375) {
+            width: 101%;
+          }
+        }
+      }
+
+      .form-mess {
+        position: relative;
+        textarea {
+          line-height: 1.1;
+          width: 88%;
+          padding: 1.2rem 1rem 4.9rem 2.5rem;
+          border-radius: 14px;
+
+          @include breakpoint(991) {
+            width: 93.5%;
+          }
+
+          @include breakpoint(375) {
+            width: 86.5%;
+          }
+        }
+        i {
+          @include icon(1.4rem, 1.2rem);
+        }
+      }
+
+      button {
+        padding: 1.8rem 6rem;
+        font-weight: $fw-3;
+        text-align: left;
+        display: inherit;
+        margin: 4.2rem 0;
+
+        @include breakpoint(767) {
+          padding: 1.8rem 30.5rem;
+        }
+
+        @include breakpoint(575) {
+          padding: 1.8rem 21rem;
+        }
+
+        @include breakpoint(375) {
+          padding: 1.8rem 10.5rem;
+        }
+      }
     }
   }
+  .contact-wallpaper img {
+    @include Wallpaper(none, -1, 0);
+  }
+}
+
+@include breakpoint(767) {
+  .contact .container .contact__form .form-text .contactName input, .contact .container .contact__form .form-text .contactEmail input {
+    padding: 1.1rem 49rem 1rem 2.6rem;
+  }
+}
